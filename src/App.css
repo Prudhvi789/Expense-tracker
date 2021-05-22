@@ -1,0 +1,50 @@
+.App{
+    display : grid;
+    justify-content : center ;
+}
+
+.balance{
+    padding :2% 5%;
+    margin-bottom : 1rem;
+}
+
+.card{
+    display : flex;
+    flex-direction :row;
+    justify-content : center;
+    align-items : center;
+    margin-top : 1rem;
+}
+
+.card span{
+    padding : 1rem;
+}
+
+.form > * {
+    margin : 2% 0 !important;
+}
+
+.form Button{
+    background-color: #1c96dd;
+}
+
+.form Button:hover{
+    background-color: #69abd9;
+}
+
+.transaction > div {
+    padding : 0.6rem;
+    display:flex;
+    justify-content : space-between;
+    margin-bottom : 1rem;
+}
+
+
+
+.red{
+    border-right : 0.4rem solid rgb(255,18,18);
+}
+
+.green{
+    border-right : 0.4rem solid rgb(10,217,10);
+}
