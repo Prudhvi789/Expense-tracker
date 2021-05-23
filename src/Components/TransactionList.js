@@ -6,16 +6,17 @@ const TransactionList = () => {
     const context = useContext(GlobalContext);
 
     return (
-    <div className="transaction">
+    <div >
         <Typography variant="h6">History</Typography>
            {context.transactions.map((ele)=>{
                return (
-                <>
-                    <Card className={ele.amount > 0 ? 'green' : 'red'} key={ele.id}>
+                <div key={ele.id} className="transaction">
+                    <Button onClick={()=>{context.deleteTransaction(ele.id)}}>Delete</Button>
+                    <Card className={(ele.amount > 0 ? 'green' : 'red') + 'transactionCard'}  >
                         <span>{ele.text}</span><span>{ele.amount > 0 ? '+' : '-' }{ele.amount}</span>
                     </Card>
-                    <Button onClick={()=>{context.deleteTransaction(ele.id)}}>Delete</Button> 
-                </>
+
+                </div>
                )
            })} 
     </div>

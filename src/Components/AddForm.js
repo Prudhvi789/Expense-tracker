@@ -9,7 +9,7 @@ const AddForm = () => {
     const trans = {
         id : Math.random() * 10000000,
         text : text,
-        amount : amount
+        amount : +amount
     }
 
     const handler = (e) => {
@@ -18,6 +18,8 @@ const AddForm = () => {
         setText('');
         setAmount('');
     }
+
+    console.log(typeof amount);
 
     return (
     <FormGroup className="form">
@@ -28,7 +30,7 @@ const AddForm = () => {
         </FormControl>
         <FormControl>    
             <FormLabel >Amount</FormLabel>
-            <Input type="text" value={amount} onChange={(e)=>{setAmount(+e.target.value)}}></Input>
+            <Input type="text" value={amount} onChange={(e)=>{setAmount(e.target.value)}}></Input>
         </FormControl>
         <Button onClick={handler}>Add</Button>
     </FormGroup>

@@ -32,19 +32,25 @@
     background-color: #69abd9;
 }
 
-.transaction > div {
+.transaction{
+    display : flex;
+    margin-left : -5rem;
+}
+
+.redtransactionCard{
+    border-right : 0.4rem solid rgb(255,18,18);
     padding : 0.6rem;
     display:flex;
     justify-content : space-between;
     margin-bottom : 1rem;
+    width: -webkit-fill-available;
 }
 
-
-
-.red{
-    border-right : 0.4rem solid rgb(255,18,18);
-}
-
-.green{
+.greentransactionCard{
     border-right : 0.4rem solid rgb(10,217,10);
+    padding : 0.6rem;
+    display:flex;
+    justify-content : space-between;
+    margin-bottom : 1rem;
+    width: -webkit-fill-available;
 }
